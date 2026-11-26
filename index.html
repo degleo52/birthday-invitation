@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banu’s Sweet Seventeen — Birthday Invitation 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- AUDIO LATAR -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="lagu.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- FLASH PUTIH TRANSISI -->
+  <div id="whiteFlash" class="white-flash"></div>
+
+  <!-- TOAST NOTIFIKASI -->
+  <div id="toastNotif" class="toast-notif">✅ Berhasil!</div>
+
+  <!-- ================= 1. COVER SCREEN ================= -->
+  <section id="coverScreen" class="cover-screen">
+    <div class="disco-hang left">
+      <div class="string"></div>
+      <div class="disco-sphere big"></div>
+    </div>
+    <div class="disco-hang right">
+      <div class="string short"></div>
+      <div class="disco-sphere med"></div>
+    </div>
+    <div class="disco-hang far-right">
+      <div class="string tiny"></div>
+      <div class="disco-sphere small blur-ball"></div>
+    </div>
+
+    <span class="star-deco s1">✦</span>
+    <span class="star-deco s2">★</span>
+    <span class="star-deco s3">✦</span>
+    <span class="star-deco s4">★</span>
+    <span class="star-deco s5">★</span>
+    <span class="star-deco s6">✦</span>
+
+    <div class="cover-center">
+      <div class="foil-17-wrap anim-blur d-1">
+        <span class="foil-17">17</span>
+      </div>
+
+      <h1 class="cover-script anim-blur d-2" data-text="Banu’s Sweet Seventeen">
+        Banu’s Sweet<br>Seventeen
+      </h1>
+
+      <div class="cover-dear anim-blur d-3">
+        <p class="dear-label">Dear,</p>
+        <div class="guest-name" id="coverNama">Tamu Undangan</div>
+        <small class="guest-org" id="coverInstansi">Contra Restaurant Senopati</small>
+      </div>
+
+      <button type="button" class="btn-open-pill anim-blur d-4" onclick="bukaUndangan()">
+        Open Invitation
+      </button>
+    </div>
+
+    <div class="denim-lace-footer" aria-hidden="true">
+      <svg viewBox="0 0 400 130" preserveAspectRatio="none" class="denim-tear-svg">
+        <defs>
+          <pattern id="denimWeave" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+            <rect width="6" height="6" fill="#2c4c7e" />
+            <line x1="0" y1="0" x2="0" y2="6" stroke="#1b3154" stroke-width="2.5" />
+            <line x1="3" y1="0" x2="3" y2="6" stroke="#4f74ad" stroke-width="1.5" />
+          </pattern>
+        </defs>
+        <path d="M-10,18 Q35,8 75,35 T165,55 T265,78 T355,102 L410,122 L410,140 L-10,140 Z"
+              fill="none" stroke="#dce6f7" stroke-width="7" stroke-dasharray="3 2 5 1" opacity="0.9"/>
+        <path d="M-10,22 Q35,12 75,39 T165,59 T265,82 T355,106 L410,126 L410,140 L-10,140 Z"
+              fill="url(#denimWeave)" />
+        <g stroke="#ffffff" fill="none" opacity="0.92">
+          <circle cx="38" cy="86" r="24" stroke-width="1.4" stroke-dasharray="3 2"/>
+          <circle cx="38" cy="86" r="14" stroke-width="1.8"/>
+          <circle cx="38" cy="86" r="5" fill="#ffffff"/>
+          <path d="M38,62 Q44,72 38,82 Q32,72 38,62 M38,110 Q44,100 38,90 Q32,100 38,110 M14,86 Q24,80 34,86 Q24,92 14,86 M62,86 Q52,80 42,86 Q52,92 62,86" stroke-width="1.5"/>
+          <circle cx="92" cy="108" r="18" stroke-width="1.2" stroke-dasharray="2 2"/>
+          <circle cx="92" cy="108" r="9" stroke-width="1.5"/>
+          <path d="M0,45 Q25,42 48,60 T95,88 T145,125" stroke-width="1.5" stroke-dasharray="4 3"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- KONTROL MUSIK MELAYANG -->
+  <div id="floatingControls" class="floating-controls">
+    <button type="button" id="musicBtn" class="float-btn" onclick="toggleMusic()" aria-label="Kontrol Musik">
+      <span id="musicIcon">🔊</span>
+      <span id="musicText">Musik</span>
+    </button>
+  </div>
+
+  <!-- ================= 2. KONTEN UTAMA UNDANGAN ================= -->
+  <main id="mainApp" class="invitation-wrapper">
+
+    <!-- SLIDE 1: JADWAL ACARA, COUNTDOWN & GOOGLE MAPS -->
+    <section class="slide-paper slide-hero reveal">
+      <div class="disco-bow-tl" aria-hidden="true">
+        <div class="disco-sphere xl"></div>
+        <svg class="navy-bow-svg" viewBox="0 0 120 95" fill="none">
+          <defs>
+            <linearGradient id="satinNavy" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#3b5998"/>
+              <stop offset="45%" stop-color="#172747"/>
+              <stop offset="100%" stop-color="#0d172c"/>
+            </linearGradient>
+          </defs>
+          <path d="M54 44 L34 86 L46 80 L57 48 Z" fill="url(#satinNavy)"/>
+          <path d="M66 44 L86 86 L74 80 L63 48 Z" fill="url(#satinNavy)"/>
+          <path d="M56 36 C28 10, 8 24, 16 44 C22 58, 44 48, 56 42 Z" fill="url(#satinNavy)" stroke="#5b7ec2" stroke-width="0.8"/>
+          <path d="M64 36 C92 10, 112 24, 104 44 C98 58, 76 48, 64 42 Z" fill="url(#satinNavy)" stroke="#5b7ec2" stroke-width="0.8"/>
+          <rect x="53" y="32" width="14" height="15" rx="4" fill="#101d36" stroke="#6c8fd4" stroke-width="0.8"/>
+        </svg>
+      </div>
+
+      <div class="crystal-star top-right" aria-hidden="true">★</div>
+      <div class="crystal-star mid-right" aria-hidden="true">✦</div>
+      <div class="disco-blue-tr" aria-hidden="true"></div>
+      <div class="crystal-star bottom-left" aria-hidden="true">★</div>
+      <div class="disco-corner-br" aria-hidden="true"></div>
+
+      <span class="star-navy sn1">★</span>
+      <span class="star-navy sn2">★</span>
+      <span class="star-navy sn3">★</span>
+
+      <div class="slide-content">
+        <p class="caps-eyebrow anim-item">JOIN US TO CELEBRATE</p>
+        <h2 class="script-navy hero-title anim-item">Banu’s 17th Birthday</h2>
+
+        <div class="calendar-lockup anim-item">
+          <span class="script-month">Desember</span>
+          <div class="date-split">
+            <span class="split-side">Saturday</span>
+            <strong class="split-num">19</strong>
+            <span class="split-side">6:30 pm</span>
+          </div>
+          <span class="year-num">2026</span>
+        </div>
+
+        <p class="venue-bold anim-item">Rooftop Contra Restaurant</p>
+        <p class="venue-sub anim-item">Jl. Ciranjang No.28, Rawa Barat, Kec. Kby. Baru, Kota Jakarta Selatan</p>
+
+        <div class="btn-row anim-item">
+          <a href="https://www.google.com/maps/search/?api=1&query=Contra+Jl.+Ciranjang+Senopati+Jakarta+Selatan"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-navy-solid maps-main-btn">
+            Google Maps
+          </a>
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Banu%27s+Sweet+17th+Birthday&dates=20261219T113000Z/20261219T150000Z&details=Sweet+17th+Birthday+Party+at+Rooftop+Contra+Restaurant+Senopati&location=Contra+Jl.+Ciranjang+No.28+Senopati+Jakarta+Selatan"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-navy-border">
+            + Kalender
+          </a>
+        </div>
+
+        <div class="countdown-strip anim-item">
+          <div class="cd-pill"><span id="days">00</span><small>Hari</small></div>
+          <div class="cd-pill"><span id="hours">00</span><small>Jam</small></div>
+          <div class="cd-pill"><span id="minutes">00</span><small>Menit</small></div>
+          <div class="cd-pill"><span id="seconds">00</span><small>Detik</small></div>
+        </div>
+
+        <!-- Peta Google Maps Interaktif Contra Senopati -->
+        <div class="map-frame anim-item">
+          <iframe
+            src="https://maps.google.com/maps?q=Contra+Jl.+Ciranjang+No.28+Senopati+Jakarta+Selatan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Peta Lokasi Rooftop Contra Restaurant Senopati">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: QUOTE & DRESSCODE -->
+    <section class="slide-paper slide-quote-sec reveal">
+      <svg class="sketch-svg glass-tl" viewBox="0 0 64 80" fill="none" stroke="#1b2840" stroke-width="1.5">
+        <path d="M16 14 H48 L32 38 Z"/>
+        <path d="M21 21 H43" stroke-dasharray="2 2"/>
+        <line x1="32" y1="38" x2="32" y2="66"/>
+        <ellipse cx="32" cy="67" rx="12" ry="3"/>
+        <line x1="40" y1="8" x2="29" y2="27"/>
+        <circle cx="38" cy="12" r="2.5"/>
+      </svg>
+
+      <svg class="sketch-svg glass-bl" viewBox="0 0 64 80" fill="none" stroke="#1b2840" stroke-width="1.5">
+        <path d="M18 16 H46 L32 40 Z"/>
+        <line x1="32" y1="40" x2="32" y2="66"/>
+        <ellipse cx="32" cy="67" rx="11" ry="3"/>
+        <path d="M44 12 C48 12, 50 17, 46 20"/>
+      </svg>
+
+      <svg class="sketch-svg glass-tr" viewBox="0 0 64 80" fill="none" stroke="#1b2840" stroke-width="1.5">
+        <path d="M22 14 H42 L39 36 C38 41, 26 41, 25 36 Z"/>
+        <line x1="32" y1="40" x2="32" y2="66"/>
+        <ellipse cx="32" cy="67" rx="11" ry="3"/>
+      </svg>
+
+      <svg class="sketch-svg cake-br" viewBox="0 0 110 120" fill="none" stroke="#1b2840" stroke-width="1.6">
+        <rect x="44" y="14" width="4" height="22" rx="1"/>
+        <rect x="62" y="14" width="4" height="22" rx="1"/>
+        <path d="M46 6 C48 10, 48 13, 46 14 C44 13, 44 10, 46 6 Z"/>
+        <path d="M64 6 C66 10, 66 13, 64 14 C62 13, 62 10, 64 6 Z"/>
+        <rect x="30" y="36" width="50" height="24" rx="3"/>
+        <path d="M30 44 Q36 50 42 44 T55 44 T68 44 T80 44"/>
+        <rect x="20" y="60" width="70" height="28" rx="4"/>
+        <path d="M20 70 Q28 77 36 70 T55 70 T74 70 T90 70"/>
+        <line x1="12" y1="88" x2="98" y2="88" stroke-width="2"/>
+        <path d="M48 88 L44 106 H66 L62 88"/>
+        <ellipse cx="55" cy="107" rx="22" ry="4"/>
+      </svg>
+
+      <div class="crystal-star bottom-left small-star" aria-hidden="true">★</div>
+      <span class="star-navy sn4">★</span>
+      <span class="star-navy sn5">★</span>
+      <span class="star-navy sn6">★</span>
+
+      <div class="slide-content">
+        <p class="script-quote anim-item">
+          We can’t wait<br>
+          to celebrate 17 magical years<br>
+          of laughter, love &amp; sparkle
+        </p>
+
+        <div class="line-note-wrap anim-item">
+          <hr class="thin-divider" />
+        </div>
+
+        <div class="dresscode-area anim-item">
+          <h3 class="script-sub-navy">Dresscode</h3>
+          <p class="muted-small">Wear outfit follow this color palette:</p>
+          <div class="swatch-row">
+            <span class="circle-swatch swatch-white" title="White"></span>
+            <span class="circle-swatch swatch-navy" title="Navy Blue"></span>
+          </div>
+          <strong class="palette-text">White or Blue</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: BIRTHDAY THINGS -->
+    <section class="slide-denim reveal">
+      <div class="lace-crochet top" aria-hidden="true"></div>
+
+      <h3 class="script-white anim-item">Birthday Things</h3>
+
+      <div class="things-grid anim-item">
+        <div class="thing-card">
+          <svg class="line-svg" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="40" cy="64" rx="28" ry="6"/>
+            <rect x="18" y="44" width="44" height="18" rx="3"/>
+            <path d="M18 51 Q25 56 32 51 T48 51 T62 51"/>
+            <rect x="24" y="28" width="32" height="16" rx="2"/>
+            <path d="M24 34 Q30 39 36 34 T48 34 T56 34"/>
+            <line x1="30" y1="18" x2="30" y2="28"/>
+            <line x1="40" y1="16" x2="40" y2="28"/>
+            <line x1="50" y1="18" x2="50" y2="28"/>
+            <circle cx="30" cy="14" r="1.5" fill="currentColor"/>
+            <circle cx="40" cy="12" r="1.5" fill="currentColor"/>
+            <circle cx="50" cy="14" r="1.5" fill="currentColor"/>
+          </svg>
+          <span>CAKE SESSION</span>
+        </div>
+
+        <div class="thing-card">
+          <svg class="line-svg" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="38" cy="44" rx="24" ry="15"/>
+            <ellipse cx="38" cy="44" rx="17" ry="10"/>
+            <path d="M28 43 C31 37, 45 37, 48 43 C46 48, 30 48, 28 43 Z"/>
+            <line x1="12" y1="26" x2="18" y2="58"/>
+            <path d="M9 26 L11 34 M12 25 L13 34 M15 26 L15 34"/>
+            <path d="M64 25 C67 32, 66 42, 63 44 L60 58"/>
+          </svg>
+          <span>DINNER</span>
+        </div>
+
+        <div class="thing-card">
+          <svg class="line-svg" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="12" y="24" width="56" height="36" rx="6"/>
+            <path d="M26 24 L30 16 H50 L54 24"/>
+            <rect x="17" y="19" width="7" height="5" rx="1"/>
+            <circle cx="42" cy="42" r="13"/>
+            <circle cx="42" cy="42" r="8"/>
+            <circle cx="21" cy="32" r="2" fill="currentColor"/>
+          </svg>
+          <span>TAKE A PICT</span>
+        </div>
+
+        <div class="thing-card">
+          <svg class="line-svg" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 28 H58 C65 28, 70 36, 68 48 C66 56, 60 58, 55 52 L50 46 H30 L25 52 C20 58, 14 56, 12 48 C10 36, 15 28, 22 28 Z"/>
+            <line x1="25" y1="34" x2="25" y2="42"/>
+            <line x1="21" y1="38" x2="29" y2="38"/>
+            <circle cx="54" cy="35" r="1.8" fill="currentColor"/>
+            <circle cx="58" cy="39" r="1.8" fill="currentColor"/>
+            <circle cx="50" cy="39" r="1.8" fill="currentColor"/>
+            <circle cx="54" cy="43" r="1.8" fill="currentColor"/>
+          </svg>
+          <span>GAME</span>
+        </div>
+      </div>
+
+      <div class="lace-crochet bottom" aria-hidden="true"></div>
+    </section>
+
+    <!-- SLIDE 4: PHOTO GALLERY & BIRTHDAY GIFT -->
+    <section class="slide-paper reveal">
+      <p class="caps-eyebrow">MEMORIES &amp; GIFT</p>
+      <h3 class="script-navy">Photo Gallery</h3>
+
+      <div class="gallery-grid">
+        <figure class="photo-card reveal">
+          <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=80" alt="Sparkle Night" loading="lazy">
+          <figcaption>Sparkle Night</figcaption>
+        </figure>
+        <figure class="photo-card reveal">
+          <img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=600&q=80" alt="Cake Session" loading="lazy">
+          <figcaption>Cake Session</figcaption>
+        </figure>
+        <figure class="photo-card reveal">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80" alt="Best Friends" loading="lazy">
+          <figcaption>Best Friends</figcaption>
+        </figure>
+        <figure class="photo-card reveal">
+          <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80" alt="Party Lights" loading="lazy">
+          <figcaption>Party Lights</figcaption>
+        </figure>
+      </div>
+
+      <div class="gift-wrapper">
+        <h4 class="script-sub-navy">Birthday Gift</h4>
+        <p class="muted-small">Salin nomor rekening atau alamat pengiriman kado:</p>
+
+        <div class="gift-row">
+          <div class="gift-box">
+            <small>Transfer BCA — Banu</small>
+            <strong>8820459123</strong>
+            <button type="button" class="btn-copy" onclick="copyText('8820459123', 'Nomor rekening disalin!')">
+              📋 Salin Rekening
+            </button>
+          </div>
+          <div class="gift-box">
+            <small>Alamat Pengiriman Kado</small>
+            <p>Jl. Cendana, Velonia no.2, Rawakalong, Gn.Sindur</p>
+            <button type="button" class="btn-copy" onclick="copyText('Jl. Cendana, Velonia no.2, Rawakalong, Gn.Sindur', 'Alamat kado disalin!')">
+              📋 Salin Alamat
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: RSVP & LIVE GUESTBOOK -->
+    <section class="slide-paper reveal">
+      <p class="caps-eyebrow">CONFIRMATION &amp; WISHES</p>
+      <h3 class="script-navy">RSVP &amp; Guestbook</h3>
+
+      <form id="rsvpForm" class="rsvp-form">
+        <div class="form-group">
+          <label for="nama">Nama Tamu</label>
+          <input type="text" id="nama" class="form-input" placeholder="Masukkan nama lengkap" required />
+        </div>
+
+        <div class="form-group">
+          <label for="instansi">Asal Kelas / Instansi</label>
+          <input type="text" id="instansi" class="form-input" placeholder="Masukkan asal kelas / instansi" required />
+        </div>
+
+        <div class="form-group">
+          <label for="kehadiran">Status Kehadiran</label>
+          <select id="kehadiran" class="form-input" required>
+            <option value="Hadir">Hadir</option>
+            <option value="Tidak Hadir">Tidak Hadir</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pesan">Ucapan &amp; Doa</label>
+          <textarea id="pesan" class="form-input" rows="3" placeholder="Tulis ucapan ulang tahun untuk Banu..." required></textarea>
+        </div>
+
+        <button type="submit" id="btnSubmit" class="btn-navy-solid wide-btn">Kirim Konfirmasi</button>
+        <div id="alertBox" class="alert-box"></div>
+      </form>
+
+      <div class="guestbook-area">
+        <div class="guestbook-header">
+          <h4>Ucapan Tamu Undangan</h4>
+          <span id="guestCount" class="count-badge">0 Ucapan</span>
+        </div>
+        <div id="guestbookList" class="guestbook-list">
+          <p class="empty-msg">Memuat daftar ucapan...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: PENUTUP -->
+    <footer class="hbd-closing" aria-label="Happy Birthday Closing">
+      <div class="hbd-pattern-canvas">
+        <div class="hbd-diagonal-rows">
+          <span>HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY</span>
+          <span>BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY</span>
+          <span>HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY</span>
+          <span>BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY</span>
+          <span>HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY</span>
+          <span>BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY</span>
+          <span>HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY</span>
+          <span>BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY</span>
+          <span>HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY</span>
+          <span>BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY</span>
+          <span>HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY</span>
+          <span>BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY</span>
+          <span>HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY</span>
+          <span>BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY BIRTHDAY HAPPY</span>
+        </div>
+      </div>
+      <p class="footer-note">Banu’s Sweet Seventeen</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
